@@ -1,47 +1,20 @@
-<script setup>
-import HelloWorld from './components/HelloWorld.vue'
-import TheWelcome from './components/TheWelcome.vue'
-</script>
-
 <template>
-  <header>
-    <img alt="Vue logo" class="logo" src="./assets/logo.svg" width="125" height="125" />
-
-    <div class="wrapper">
-      <HelloWorld msg="You did it!" />
-    </div>
-  </header>
+ 
 
   <main>
-    <TheWelcome />
+    <nav>
+      <ul class="flex space-x-4 p-4 bg-blue-500 text-white">
+        <li><router-link to="/" class="opacity-50 hover:opacity-100">Home</router-link></li>
+        <li><router-link to="/about" class="opacity-50 hover:opacity-100">About</router-link></li>
+        <li><router-link to="/track-expenses" class="opacity-50 hover:opacity-100">Track Expenses</router-link></li>
+      </ul>
+    </nav>
+
+    <!-- This is where the routed components will be displayed -->
+    <router-view></router-view>
   </main>
 </template>
 
-<style scoped>
-header {
-  line-height: 1.5;
-}
-
-.logo {
-  display: block;
-  margin: 0 auto 2rem;
-}
-
-@media (min-width: 1024px) {
-  header {
-    display: flex;
-    place-items: center;
-    padding-right: calc(var(--section-gap) / 2);
-  }
-
-  .logo {
-    margin: 0 2rem 0 0;
-  }
-
-  header .wrapper {
-    display: flex;
-    place-items: flex-start;
-    flex-wrap: wrap;
-  }
-}
-</style>
+<script setup>
+// No additional setup needed here for routing
+</script>

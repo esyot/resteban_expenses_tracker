@@ -1,6 +1,7 @@
-import './assets/main.css'
+import { createApp } from 'vue';
+import App from './App.vue';
+import router from './router'; // Import the router
 
-import { createApp } from 'vue'
-import Tracker from './Tracker.vue'
-
-createApp(Tracker).mount('#app')
+createApp(App)
+  .use(router)  // Use the router
+  .mount('#app');
